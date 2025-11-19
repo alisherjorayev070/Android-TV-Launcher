@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/accessibility_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:background="@drawable/bg_selector_button"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="14dp"
+        android:text="Accessibility Service"
+        android:textAllCaps="false"
+        android:textColor="@color/selector_white_black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/set_as_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/bg_selector_button"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="14dp"
+        android:text="Set as default app"
+        android:textAllCaps="false"
+        android:textColor="@color/selector_white_black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/accessibility_service"
+        app:layout_constraintTop_toTopOf="@id/accessibility_service" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/bg_selector_button"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="14dp"
+        android:text="Settings"
+        android:textAllCaps="false"
+        android:textColor="@color/selector_white_black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/set_as_default"
+        app:layout_constraintTop_toTopOf="@id/accessibility_service" />
+
+    <androidx.leanback.widget.HorizontalGridView
+        android:id="@+id/apps_rv"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:padding="30dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/accessibility_service"
+        app:spanCount="5"
+        tools:listitem="@layout/item_app" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/launcher_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_selector_button"
+        android:checked="true"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="14dp"
+        android:text="Launcher"
+        android:textAllCaps="false"
+        android:textColor="@color/selector_white_black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/accessibility_service"
+        app:layout_constraintTop_toBottomOf="@id/apps_rv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:focusable="false"
+        android:text="Launcher to\'g\'ri ishlashi uchun Accessibility Service yoqilgan bo\'lishi kerak!"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/launcher_checkbox" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

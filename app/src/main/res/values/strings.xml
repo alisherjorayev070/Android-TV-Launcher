@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Android TV Launcher</string>
+    <string name="accessibility_service_desc" translatable="false">Enable to be able to allow projects to lock the screen</string>
+
+</resources>
