@@ -1,4 +1,4 @@
-package uz.devlooper.androidtvlauncher
+package uz.devlooper.androidtvlauncher.ui
 
 import android.content.Context
 import android.content.Intent
@@ -11,6 +11,8 @@ import android.view.animation.DecelerateInterpolator
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import coil.load
+import uz.devlooper.androidtvlauncher.models.AppItemData
+import uz.devlooper.androidtvlauncher.utils.BaseVH
 import uz.devlooper.androidtvlauncher.databinding.ItemAppBinding
 
 class AppsAdapter : ListAdapter<AppItemData, AppsAdapter.VH>(FlowerDiffCallback) {

@@ -9,8 +9,8 @@ import android.os.Looper
 import android.provider.Settings
 import android.view.KeyEvent
 import android.view.accessibility.AccessibilityEvent
-import uz.devlooper.androidtvlauncher.MainActivity
-import uz.devlooper.androidtvlauncher.log
+import uz.devlooper.androidtvlauncher.ui.MainActivity
+import uz.devlooper.androidtvlauncher.utils.log
 
 class MyAccessibilityService : AccessibilityService() {
 

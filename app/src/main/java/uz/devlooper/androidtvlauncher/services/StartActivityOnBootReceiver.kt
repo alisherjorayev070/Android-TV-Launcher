@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import uz.devlooper.androidtvlauncher.MainActivity
+import uz.devlooper.androidtvlauncher.ui.MainActivity
 
 class StartActivityOnBootReceiver : BroadcastReceiver() {
 

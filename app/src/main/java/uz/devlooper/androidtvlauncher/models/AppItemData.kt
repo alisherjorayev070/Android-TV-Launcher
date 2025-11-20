@@ -1,4 +1,4 @@
-package uz.devlooper.androidtvlauncher
+package uz.devlooper.androidtvlauncher.models
 
 data class AppItemData(
     val id: String,

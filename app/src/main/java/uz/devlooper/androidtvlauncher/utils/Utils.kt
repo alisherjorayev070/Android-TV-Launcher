@@ -1,4 +1,4 @@
-package uz.devlooper.androidtvlauncher
+package uz.devlooper.androidtvlauncher.utils
 
 import android.util.Log
 

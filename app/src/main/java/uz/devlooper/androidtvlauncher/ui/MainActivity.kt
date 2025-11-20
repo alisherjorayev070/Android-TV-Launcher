@@ -1,4 +1,4 @@
-package uz.devlooper.androidtvlauncher
+package uz.devlooper.androidtvlauncher.ui
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -8,7 +8,9 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import uz.devlooper.androidtvlauncher.R
 import uz.devlooper.androidtvlauncher.databinding.ActivityMainBinding
+import uz.devlooper.androidtvlauncher.utils.log
 import uz.devlooper.androidtvlauncher.services.AppResolver
 import uz.devlooper.androidtvlauncher.services.DefaultLauncherHelper
 import uz.devlooper.androidtvlauncher.services.SharedPreference
@@ -68,7 +70,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     if (!defaultLauncherHelper.isDefaultLauncher()) {
                         val intent = defaultLauncherHelper.requestDefaultLauncherIntent()
                         if (intent != null) {
-                            startActivityForResult(intent, 0)
+                            accessibilityLaunchListener.launch(intent)
                         }
                     } else {
                         Toast.makeText(this, "App already set as default!", Toast.LENGTH_SHORT)

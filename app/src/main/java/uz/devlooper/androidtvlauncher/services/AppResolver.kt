@@ -5,7 +5,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.pm.ResolveInfo
 import android.os.Build
-import uz.devlooper.androidtvlauncher.AppItemData
+import uz.devlooper.androidtvlauncher.models.AppItemData
 
 class AppResolver {
     companion object {
